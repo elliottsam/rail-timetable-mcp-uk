@@ -1,0 +1,22 @@
+# Copy .env.example to .env and fill it in, then: docker compose up --build
+services:
+  rail-mcp:
+    build: .
+    ports:
+      # Published on loopback only; put a TLS-terminating proxy in front to
+      # expose it beyond this machine.
+      - "127.0.0.1:8080:8080"
+    environment:
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN in .env}
+      RAILDATA_API_KEY: ${RAILDATA_API_KEY:-}
+      RAILDATA_SERVICE_API_KEY: ${RAILDATA_SERVICE_API_KEY:-}
+      MCP_ALLOWED_ORIGINS: ${MCP_ALLOWED_ORIGINS:-}
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      # distroless has no shell or curl, so the binary probes itself.
+      test: ["CMD", "/rail-mcp", "-healthcheck"]
+      interval: 30s
+      timeout: 5s
+    restart: unless-stopped

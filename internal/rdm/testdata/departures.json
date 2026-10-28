@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-10-28T08:30:00+00:00",
+  "locationName": "London Kings Cross",
+  "crs": "KGX",
+  "nrccMessages": [
+    {"value": "Engineering work on <a href=\"https://example.invalid\">the East Coast Main Line</a> this weekend."}
+  ],
+  "trainServices": [
+    {
+      "std": "08:33",
+      "etd": "On time",
+      "platform": "4",
+      "operator": "LNER",
+      "length": 9,
+      "isCancelled": false,
+      "serviceID": "SVC-LNER-0833",
+      "origin": [{"locationName": "London Kings Cross", "crs": "KGX"}],
+      "destination": [{"locationName": "Edinburgh", "crs": "EDB"}],
+      "subsequentCallingPoints": [
+        {"callingPoint": [
+          {"locationName": "Peterborough", "crs": "PBO", "st": "09:05", "et": "On time"},
+          {"locationName": "York", "crs": "YRK", "st": "10:20", "et": "On time"}
+        ]}
+      ]
+    },
+    {
+      "std": "08:40",
+      "etd": "08:52",
+      "platform": "",
+      "operator": "Hull Trains",
+      "isCancelled": false,
+      "delayReason": "A late running earlier train",
+      "serviceID": "SVC-HULL-0840",
+      "origin": [{"locationName": "London Kings Cross", "crs": "KGX"}],
+      "destination": [{"locationName": "Hull", "crs": "HUL"}]
+    },
+    {
+      "std": "08:45",
+      "etd": "Cancelled",
+      "operator": "Great Northern",
+      "isCancelled": true,
+      "cancelReason": "A fault with the signalling system",
+      "serviceID": "SVC-GN-0845",
+      "origin": [{"locationName": "London Kings Cross", "crs": "KGX"}],
+      "destination": [{"locationName": "Cambridge", "crs": "CBG"}]
+    }
+  ]
+}

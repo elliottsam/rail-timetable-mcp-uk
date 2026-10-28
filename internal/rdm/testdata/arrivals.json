@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-28T08:30:00+00:00",
+  "locationName": "York",
+  "crs": "YRK",
+  "trainServices": [
+    {
+      "sta": "08:41",
+      "eta": "08:44",
+      "platform": "9",
+      "operator": "LNER",
+      "serviceID": "SVC-LNER-ARR",
+      "origin": [{"locationName": "Edinburgh", "crs": "EDB"}],
+      "destination": [{"locationName": "London Kings Cross", "crs": "KGX"}],
+      "previousCallingPoints": [
+        {"callingPoint": [
+          {"locationName": "Newcastle", "crs": "NCL", "st": "07:50", "et": "On time", "at": "07:51"}
+        ]}
+      ]
+    }
+  ]
+}
