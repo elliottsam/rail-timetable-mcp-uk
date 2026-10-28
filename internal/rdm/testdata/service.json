@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-28T08:30:00+00:00",
+  "rid": "202610288000001",
+  "locationName": "York",
+  "crs": "YRK",
+  "operator": "LNER",
+  "platform": "9",
+  "isCancelled": false,
+  "previousCallingPoints": [
+    {"callingPoint": [
+      {"locationName": "Edinburgh", "crs": "EDB", "st": "06:00", "at": "06:01"},
+      {"locationName": "Newcastle", "crs": "NCL", "st": "07:50", "at": "07:51"}
+    ]}
+  ],
+  "subsequentCallingPoints": [
+    {"callingPoint": [
+      {"locationName": "Doncaster", "crs": "DON", "st": "09:15", "et": "On time"},
+      {"locationName": "London Kings Cross", "crs": "KGX", "st": "10:45", "et": "Cancelled", "isCancelled": true}
+    ]}
+  ]
+}
