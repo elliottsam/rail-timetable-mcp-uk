@@ -1,0 +1,6 @@
+/bin/
+.env
+*.test
+*.out
+/internal/**/testdata/fuzz/
+.claude/settings.local.json
